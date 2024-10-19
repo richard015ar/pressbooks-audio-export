@@ -1,6 +1,6 @@
 # Pressbooks Audio Export AI
 
-This Network plugin adds an export option to Pressbooks that allows you to export your book as an audio file. It uses OpenAI to generate the audio.
+This Network plugin adds an export option to Pressbooks that allows you to export Pressbooks books as audio files. It uses OpenAI to generate the audio.
 
 ## Requirements
 - [OpenAI API key](https://platform.openai.com/api-keys)
