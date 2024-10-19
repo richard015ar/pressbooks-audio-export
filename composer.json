@@ -1,0 +1,53 @@
+{
+	"name": "pressbooks/pressbooks-audio-export",
+	"description": "A plugin that allows you to export your Pressbooks books as an audio file.",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Pressbooks (Book Oven Inc.)",
+			"email": "code@pressbooks.com"
+		}
+	],
+	"require": {
+		"php": "^8.1",
+		"illuminate/database": "^8.83",
+		"illuminate/pagination": "^8.83"
+	},
+	"require-dev": {
+		"laravel/pint": "^1.10.6",
+		"yoast/phpunit-polyfills": "^1.0.5"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		},
+		"sort-packages": true
+	},
+	"autoload": {
+		"psr-4": {
+			"PressbooksAudioExport\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": [
+			"vendor/bin/phpunit --configuration phpunit.xml"
+		],
+		"test-coverage": [
+			"vendor/bin/phpunit --configuration phpunit.xml --coverage-clover coverage.xml"
+		],
+		"fix": [
+			"vendor/bin/pint"
+		],
+		"standards": [
+			"vendor/bin/pint --test"
+		]
+	}
+}
